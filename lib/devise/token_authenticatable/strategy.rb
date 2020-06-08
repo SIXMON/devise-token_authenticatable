@@ -43,6 +43,7 @@ module Devise
         end
 
         if validate(resource)
+          remember_me(resource)
           resource.after_token_authentication
           success!(resource)
         end
